@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <Task Name="PlcUpdateData" Id="{f21f6265-d8a4-4a4f-be8c-647ff8882006}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>100</CycleTime>
+    <Priority>21</Priority>
+    <PouCall>
+      <Name>AdvUpdateData</Name>
+    </PouCall>
+    <TaskFBGuid>{12af1975-ea36-4f43-bcd9-794ac360b542}</TaskFBGuid>
+    <Fb_init>{63035ab7-2dd2-4a8a-ae38-9ccf326ae59f}</Fb_init>
+    <Fb_exit>{b0980660-90f3-46e1-97e6-4bb6b9aaef93}</Fb_exit>
+    <CycleUpdate>{87040eac-14d1-4202-a7cb-62a690b67f2c}</CycleUpdate>
+    <PostCycleUpdate>{16a6f90c-442c-4483-8cf2-b0bd8e0c592f}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

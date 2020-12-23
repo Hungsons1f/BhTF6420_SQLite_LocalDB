@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ServerSettings>
+  <TargetNetID>5.73.47.99.1.1</TargetNetID>
+  <LogMode>1</LogMode>
+  <LogPath>\Hard Disk\TwinCAT\Functions\TF6420-Database-Server\Server</LogPath>
+  <LogMaxLength>10</LogMaxLength>
+  <Impersonate>False</Impersonate>
+  <DBNULLAllowed>False</DBNULLAllowed>
+  <DBCommandTimeout>30</DBCommandTimeout>
+  <DBConnectionTimeout>15</DBConnectionTimeout>
+  <MaxByteArrayLength>256</MaxByteArrayLength>
+  <MaxStringLength>256</MaxStringLength>
+  <WSTRINGSupportActive>False</WSTRINGSupportActive>
+  <TcDbSrvProject>
+    <tcdbsrvdbCompile Include="TcDbServer\DB\DB.tcdbsrvdb" />
+  </TcDbSrvProject>
+</ServerSettings>

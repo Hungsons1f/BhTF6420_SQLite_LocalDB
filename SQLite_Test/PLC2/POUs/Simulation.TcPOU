@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="Simulation" Id="{f7d866ac-478f-42ea-9426-db5e34d2e00c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Simulation
+VAR
+	rSpeed: REAL := 0;
+	rPos: REAL := 0;
+	bPulse: BOOL := TRUE;
+	fbTon: TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbTon(IN := NOT fbTon.Q, PT:= T#1S);
+IF (fbTon.Q) THEN
+	IF (rSpeed < 100) THEN
+		rSpeed := rSpeed + 1.1;
+	ELSE 
+		rSpeed := 0;
+	END_IF
+	IF (rPos < 100) THEN
+		rPos := rPos + 1;
+	ELSE 
+		rPos := 0;
+	END_IF
+	bPulse := NOT bPulse;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Simulation">
+      <LineId Id="2" Count="0" />
+      <LineId Id="10" Count="1" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="15" Count="1" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="19" Count="4" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
